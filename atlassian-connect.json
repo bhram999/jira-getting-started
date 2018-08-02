@@ -1,9 +1,9 @@
 {
     "key": "my-add-on",
-    "name": "Ping Pong",
+    "name": "Timelines",
     "description": "My very first add-on",
     "vendor": {
-        "name": "Angry Nerds",
+        "name": "Angry",
         "url": "https://www.atlassian.com/angrynerds"
     },
     "baseUrl": "http://localhost:3000",
@@ -21,28 +21,34 @@
         "READ"
     ],
     "modules": {
+        "webItems": [
+            {
+                "name": {
+                    "value": "Timelines"
+                },
+                "location": "system.top.navigation.bar",
+                "url": "/",
+                "key": "tl-dropdown"
+            }
+        ],
         "generalPages": [
             {
-                "key": "hello-world-page-jira",
-                "location": "system.top.navigation.bar",
                 "name": {
-                    "value": "Hello World"
+                    "value": "View All"
                 },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
-            },
+                "url": "/timelines",
+                "key": "tl-view",
+                "location": "tl-dropdown/tl-section",
+                "weight": 1
+            }
+        ],
+        "webSections": [
             {
-                "key": "hello-world-page-confluence",
-                "location": "system.header/left",
                 "name": {
-                    "value": "Hello World"
+                    "value": "Timelines"
                 },
-                "url": "/hello-world",
-                "conditions": [{
-                    "condition": "user_is_logged_in"
-                }]
+                "location": "tl-dropdown",
+                "key": "tl-section"
             }
         ]
     }

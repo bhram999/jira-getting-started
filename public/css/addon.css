@@ -13,3 +13,29 @@
   padding: 20px 40px 20px 0;
   height: 100px;
 }
+
+.container {
+  padding: 0 20px 0 20px;
+}
+
+header#plugin-page-header {
+  width: 95% !important;
+}
+
+section#content {
+  background-color: white;
+}
+
+#plugin-content-area {
+  width: 100% !important;
+  height: 89vh;
+}
+
+#plugin-table {
+  width: 95% !important;
+  margin: auto;
+}
+
+#plugin-table > th {
+  text-align: center;
+}
